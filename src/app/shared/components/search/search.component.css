@@ -1,0 +1,11 @@
+.mat-form-field {
+    max-width: 365px;
+    width: 100%;
+}
+
+.search {
+    display: flex;
+    flex-flow: row-reverse;
+    margin-right: 50px;
+    width: 300px;
+}

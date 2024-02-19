@@ -1,0 +1,14 @@
+.mat-mdc-card-title {
+    max-width: 50%;
+}
+
+.mat-mdc-card-content {
+    min-height: 100px;
+}
+
+a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+}

@@ -1,0 +1,32 @@
+<div class="container responsive-grid">
+    <mat-card *ngFor="let landpad of (landpads | async)" class="main-card">
+        <mat-card-header>
+            <div class="card-icon">
+                <img class="cover" ngSrc="{{landpad.images.large[0]}}" width="197" height="140" priority />
+            </div>
+            <mat-card-title>
+                <h3>{{ landpad.name }}</h3>
+                <p>
+                    {{ landpad.full_name }}
+                </p>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                <b>Locality:</b> {{ landpad.locality }} ({{ landpad.region }})
+            </p>
+            <p>
+                <b>Status:</b> {{ landpad.status }}
+            </p>
+            <p>
+                <b>Type:</b> {{ landpad.type }}
+            </p>
+            <p>
+                <b>Landings / attempts:</b> {{ landpad.landing_successes }} / {{ landpad.landing_attempts}}
+                <a mat-stroked-button class="mat-card-actions" href="https://en.wikipedia.org/w/index.php?fulltext=1&title=Special%3ASearch&ns0=1&search={{landpad.full_name}}" target="_blank">Learn
+                    more...</a>
+            </p>
+
+        </mat-card-content>
+    </mat-card>
+</div>

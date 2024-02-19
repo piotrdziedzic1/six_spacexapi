@@ -1,0 +1,34 @@
+<div class="container responsive-grid">
+    <mat-card *ngFor="let launchpad of (launchpads | async)" class="main-card">
+        <mat-card-header>
+            <div class="card-icon">
+                <img class="cover" ngSrc="{{launchpad.images.large[0]}}" width="197" height="140" priority />
+            </div>
+            <mat-card-title>
+                <h3>{{ launchpad.name }}</h3>
+                <p>
+                    {{ launchpad.full_name }}
+                </p>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                <b>Locality:</b> {{ launchpad.locality }} ({{ launchpad.region }})
+            </p>
+            <p>
+                <b>Status:</b> {{ launchpad.status }}
+            </p>
+            <p>
+                <b>Launches:</b> {{ launchpad.launches.length }}
+            </p>
+            <p>
+                <b>Rockets:</b> {{ launchpad.rockets.length }}
+                <!-- Wikipedia link -->
+                <!-- <a mat-stroked-button class="mat-card-actions" href="https://en.wikipedia.org/w/index.php?fulltext=1&title=Special%3ASearch&ns0=1&search={{launchpad.full_name}}" target="_blank">Learn
+                    more...</a> -->
+                <a mat-stroked-button class="mat-card-actions"  routerLink="/launchpad/{{launchpad.id}}">Learn more...</a>
+            </p>
+
+        </mat-card-content>
+    </mat-card>
+</div>

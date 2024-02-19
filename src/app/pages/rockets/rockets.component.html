@@ -1,0 +1,29 @@
+<div class="container responsive-grid">
+    <mat-card *ngFor="let rocket of (rockets | async)" class="main-card">
+        <mat-card-header>
+            <div class="card-icon">
+                <img class="cover" ngSrc="{{rocket.flickr_images[0]}}" width="197" height="140" priority />
+            </div>
+            <mat-card-title>
+                <h3>{{ rocket.name }}</h3>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                <b>Type:</b> {{ rocket.type }}
+            </p>
+            <p>
+                <b>Status:</b> {{ rocket.active? "active" : 'not active' }}
+            </p>
+            <p>
+                <b>Height:</b> {{ rocket.height.meters }}m
+            </p>
+            <p>
+                <b>Mass:</b> {{ rocket.mass.kg }}kg
+                <a mat-stroked-button class="mat-card-actions" href="{{rocket.wikipedia}}" target="_blank">Learn
+                    more...</a>
+            </p>
+
+        </mat-card-content>
+    </mat-card>
+</div>

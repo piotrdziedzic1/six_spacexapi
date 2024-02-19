@@ -1,0 +1,16 @@
+:host {
+    display: flex;
+    min-height: 50px;
+    background-color: #b3b3b3f5;
+    color: white;
+}
+
+.container {
+    height: 100%;
+}
+
+.footer {
+    text-align: center;
+    align-self: center;
+    width: 100%;
+}

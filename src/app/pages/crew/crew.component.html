@@ -1,0 +1,26 @@
+<div class="container responsive-grid">
+    <mat-card *ngFor="let member of (crew | async)" class="main-card">
+        <mat-card-header>
+            <div class="card-icon">
+                <img class="cover" ngSrc="{{member.image}}" width="197" height="140" priority />
+            </div>
+            <mat-card-title>
+                <h3>{{ member.name }}</h3>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                <b>Agency:</b> {{ member.agency }}
+            </p>
+            <p>
+                <b>Status:</b> {{ member.status }}
+            </p>
+            <p>
+                <b>Launches:</b> {{ member.launches.length }}
+                <a mat-stroked-button class="mat-card-actions" href="{{member.wikipedia}}" target="_blank">Learn
+                    more...</a>
+            </p>
+
+        </mat-card-content>
+    </mat-card>
+</div>

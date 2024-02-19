@@ -1,0 +1,16 @@
+.mat-mdc-card-title {
+    max-width: 40%;
+}
+
+a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+}
+
+img.cover {
+    width: 197px !important;
+    height: 140px !important;
+    object-fit: cover  !important;
+}

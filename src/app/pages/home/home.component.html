@@ -1,0 +1,125 @@
+
+<div class="title"><h2>Info</h2></div>
+<div class="container responsive-grid">
+    <mat-card class="main-card">
+        <mat-card-header>
+            <div class="card-icon home">
+                <i class="material-icons home">
+                    <span class="material-symbols-outlined">
+                        rocket_launch
+                    </span>
+                </i>
+            </div>
+            <mat-card-title>
+                <h3>{{ about?.name }}</h3>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                {{ about?.summary }}
+            </p>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="main-card">
+        <mat-card-header>
+            <div class="card-icon home">
+                <i class="material-icons home">
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+                </i>
+            </div>
+            <mat-card-title>
+                <h3>Founder</h3>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="wide">
+                <span class="number"> {{ about?.founder }}</span>
+            </p>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="main-card">
+        <mat-card-header>
+            <div class="card-icon home">
+                <i class="material-icons home">
+                    <span class="material-symbols-outlined">
+                        history
+                    </span>
+                </i>
+            </div>
+            <mat-card-title>
+                <h3>Founded</h3>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="wide">
+                <span class="number"> {{ about?.founded }}</span>
+            </p>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="main-card">
+        <mat-card-header>
+            <div class="card-icon home">
+                <i class="material-icons home">
+                    <span class="material-symbols-outlined">
+                        apartment
+                    </span>
+                </i>
+            </div>
+            <mat-card-title>
+                <h3>Headquarters</h3>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="wide">
+                <span><b>Address:</b> {{ about?.headquarters.address }}</span>
+                <span><b>City:</b> {{ about?.headquarters.city }}</span>
+                <span><b>State:</b> {{ about?.headquarters.state }}</span>
+            </p>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="main-card">
+        <mat-card-header>
+            <div class="card-icon home">
+                <i class="material-icons home">
+                    <span class="material-symbols-outlined">
+                        engineering
+                    </span>
+                </i>
+            </div>
+            <mat-card-title>
+                <h3>Employees</h3>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="wide">
+                <span class="number"> {{ about?.employees }}</span>
+            </p>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="main-card">
+        <mat-card-header>
+            <div class="card-icon home">
+                <i class="material-icons home">
+                    <span class="material-symbols-outlined">
+                        linear_scale
+                    </span>
+                </i>
+            </div>
+            <mat-card-title>
+                <h3>Launch & Test Sites</h3>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p class="wide">
+                <span class="number"> {{ about?.launch_sites + about?.test_sites }}</span>
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>

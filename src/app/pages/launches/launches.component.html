@@ -1,0 +1,28 @@
+<div class="container responsive-grid">
+    <mat-card *ngFor="let launch of (launches | async)" class="main-card">
+        <mat-card-header>
+            <div class="card-icon">
+                <img  ngSrc="{{launch.links.patch.small}}" width="197" height="140" priority />
+            </div>
+            <mat-card-title>
+                <h3>{{ launch.name }}</h3>
+                <p>
+                    {{ launch.rocket.name}} <br>  flight no. {{ launch.flight_number }}
+                </p>
+                <p>
+                    on {{ launch.date_utc | date: 'dd/MM/yyyy' }}
+                </p>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                <b>Launchpad:</b> {{ launch.launchpad.name }} ({{ launch.launchpad.region }})
+            </p>
+            <p>
+                <b>Status:</b> {{ launch.success ? 'success' : 'failure' }}
+                <a mat-stroked-button class="mat-card-actions" href="{{launch.links.wikipedia}}" target="_blank">Learn
+                    more...</a>
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>
